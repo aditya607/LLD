@@ -11,6 +11,9 @@ public class VehicleUtiltiy {
 
         for(Vehicle vehicle: vehicles) {
             if(id.equalsIgnoreCase(vehicle.getId())) {
+                synchronized(Vehicle.class) {
+
+                }
                 return Optional.of(vehicle);
             }
         }
